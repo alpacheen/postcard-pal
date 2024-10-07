@@ -1,0 +1,36 @@
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/lora/400.css';
+@import '@fontsource/lora/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-sepia;
+  }
+}
+
+@layer components {
+  .content-area {
+    @apply bg-cream bg-opacity-90 rounded-lg shadow-lg p-8;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-md font-semibold text-cream transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-coffee hover:bg-mocha;
+  }
+
+  .btn-secondary {
+    @apply bg-caramel hover:bg-vanilla text-coffee;
+  }
+
+  .input {
+    @apply mt-1 block w-full rounded-md border-caramel shadow-sm focus:border-coffee focus:ring focus:ring-coffee focus:ring-opacity-50 bg-vanilla;
+  }
+}
