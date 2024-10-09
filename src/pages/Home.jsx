@@ -1,17 +1,49 @@
 import React from 'react';
+import { Box, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div className="container mx-auto mt-16 px-4 text-center animate-fade-in">
-      <div className="content-area">
-        <h1 className="text-5xl font-serif font-bold text-coffee mb-6">Welcome to PostcardPal</h1>
-        <p className="text-xl text-mocha mb-12">Create and send beautiful vintage-style postcards to your loved ones!</p>
-        <Link to="/create" className="btn btn-primary text-lg">
-          Create Your First Postcard
-        </Link>
-      </div>
-    </div>
+    <Box
+      sx={{
+        height: '100vh',
+        backgroundImage: "url(https://img.freepik.com/premium-photo/mountain-lake-with-snow-capped-mountains-background_902338-14644.jpg)",
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Box
+        sx={{
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          padding: '2rem',
+          borderRadius: '10px',
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="h2" component="h1" gutterBottom>
+          PostcardPal
+        </Typography>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Share your adventures with custom postcards!
+        </Typography>
+        <Button
+          component={Link}
+          to="/create"
+          variant="contained"
+          color="primary"
+          size="large"
+          sx={{ mt: 2 }}
+        >
+          Create Postcard
+        </Button>
+      </Box>
+    </Box>
   );
 }
 
